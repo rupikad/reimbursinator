@@ -5,12 +5,35 @@
     <link rel="stylesheet" href="https://code.jquery.com/qunit/qunit-2.9.2.css">
     <script src="https://code.jquery.com/jquery-3.3.1.min.js" integrity="sha256-FgpCb/KJQlLNfOu91ta32o/NMZxltwRo8QtmkMRdAu8=" crossorigin="anonymous"></script>
     <script src="../js/viewHistory.js"></script>
+    <script src="../js/login.js"></script>
 </head>
 <body>
     <div id="qunit"></div>
     <div id="qunit-fixture"></div>
     <script src="https://code.jquery.com/qunit/qunit-2.9.2.js"></script>
     <script>
+
+    // Sign up page unit tests
+    QUnit.module("Login");
+
+    QUnit.test("Login", function(assert) {
+
+        //let loginIn = postToLoginEndpoint({type: submit});
+        assert.expect( 2 );
+
+        var done1 = assert.async();
+        var done2 = assert.async();
+        setTimeout(function() {
+            assert.ok( true, "test resumed from async operation 1" );
+            done1();
+        }, 500 );
+        setTimeout(function() {
+            assert.ok( true, "test resumed from async operation 2" );
+            done2();
+        }, 150);
+
+
+    });
 
     // BEGIN createFormGroup unit tests
     QUnit.module("createFormGroup");

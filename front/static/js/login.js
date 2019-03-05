@@ -8,6 +8,7 @@ function postToLoginEndpoint(event) {
     const url = "https://" + window.location.hostname + ":8444/api/v1/account/login/";
     const xhr = new XMLHttpRequest();
 
+    console.log(event);
     console.log("Attempting a connection to the following endpoint: " + url);
     console.log("User credentials:\n" + JSON.stringify(credentials));
 
